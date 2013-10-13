@@ -1,3 +1,37 @@
+
+
+
+# Ch 8
+
+# Table_of_content = [ch_one, ch_two, ch_three]
+  # ch_one = ["Chapter 1:", "Getting Started", "page 1"]
+  # ch_two = ["Chapter 2:", "Numbers", "page 9"]
+  # ch_three = ["Chapter 3:", "Letters", "page 13"]
+
+  # puts ch_one.join(", ")
+  # puts ch_two.join(", ")
+  # puts ch_three.join(", ")
+
+
+# Building and sorting an array
+
+  # words = []
+  # puts "Add as many words to the array as you like"
+  # word = "a"
+  #   while word != ""
+  #      word = gets.chomp
+  #       words << word
+  #     if word == "" 
+  #       puts words.sort
+  #     end
+  #   end      
+
+
+
+
+
+# Ch 7
+
 # Leap Years
 
   # puts "what year would you like to start?"
