@@ -7,8 +7,10 @@ This is basically the answers to the practice problems he gives you throughout t
 E.G -- Requirement. "Whatever you say to Grandma (Whatever you type in), she should respond with 'Huh?! Speak up, Sonny!' unless you shout it(type in all caps)"
 
 > puts "Tell your grandma you love her"
-> reply = gets.chomp
+ 
+>reply = gets.chomp
 > while reply != reply.upcase
+
 >     puts "Huh?! Speak up, Sonny!"
 >     reply = gets.chomp
 >   if reply == reply.upcase
