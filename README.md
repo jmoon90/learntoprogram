@@ -6,7 +6,8 @@ This is basically the answers to the practice problems he gives you throughout t
 
 E.G -- Requirement. "Whatever you say to Grandma (Whatever you type in), she should respond with 'Huh?! Speak up, Sonny!' unless you shout it(type in all caps) and yells back: No, Not since 1938."
 
-``` puts "Tell your grandma you love her"
+```ruby 
+ puts "Tell your grandma you love her"
  reply = gets.chomp
  while reply != reply.upcase
 
