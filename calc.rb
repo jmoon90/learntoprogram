@@ -1,4 +1,155 @@
+# def old_roman_numerals num
+#   raise 'Must use positive integer' if num <= 0 
+#   roman = ''
 
+#   roman = roman + "M" * (num      / 1000)
+#   roman = roman + "D" * (num % 1000/ 500)
+#   roman = roman + "C" * (num %  500/ 100)
+#   roman = roman + "L" * (num %  100/  50)
+#   roman = roman + "X" * (num %   50/  10)
+#   roman = roman + "V" * (num %   10/   5)
+#   roman = roman + "I" * (num %    5/   1)
+# end
+
+# puts(old_roman_numerals(2013))
+
+def roman_numeral num
+  thous = (num        / 1000)
+  hunds = (num % 1000 /  100)
+  tens  = (num % 100  /   10)
+  ones  = (num %  10       )
+
+  roman = "M" * thous
+    if hunds == 9
+      roman = roman + "CM" 
+    elsif hunds == 4
+      roman = roman + "CD"
+    else
+      roman = roman + "D" * (num % 1000 / 500)
+      roman = roman + "C" * (num %  500 / 100)
+    end
+
+    if tens == 9 
+      roman = roman + "XC"
+    elsif tens == 4
+      roman = roman + "XL"
+    else
+      roman = roman + "L" * (num % 100 / 50) 
+      roman = roman + "X" * (num % 50  / 10)
+    end
+
+    if ones == 9 
+      roman = roman + "IX"
+    elsif ones == 4
+      roman = roman + "IV"
+    else
+      roman = roman + "V" * (num % 10/ 5)
+      roman = roman + "I" * (num % 5 / 1)
+    end
+    roman
+  end
+  puts (roman_numeral(193))
+        
+
+
+
+# Old-school Roman numerals
+#     def old_roman_numerals number
+#       while true
+#         reply = gets.chomp
+#         if reply.to_i >= 50 && reply.to_i != 100
+#           fifty = reply.to_i % 50 
+#           if fifty.to_i >= 10 
+#             five = fifty.to_i % 10
+#             fiftyten = fifty.to_i / 10
+#             if five.to_i >=5 
+#               five_one = five.to_i - 5 
+#               if five_one.to_i % 1 == 0
+#                 puts "C" + "X"*fiftyten.to_i + "V" + "I"*five_one.to_i
+#               end 
+#             else
+#               five.to_i < 5
+#               fiftylow = five.to_i
+#               if fiftylow.to_i % 1 == 0
+#               puts "C" + "X"*fiftyten.to_i + "I"*fiftylow.to_i
+#               end
+#             end
+#           elsif
+#             fifty.to_i >= 5 
+#             five_one = fifty.to_i - 5
+#             if five_one %1 == 0 && five_one < 5
+#               puts "C" + "V" + "I"*five_one.to_i
+#             end
+#           else 
+#             fifty.to_i % 1 ==0 && fifty.to_i < 5
+#             puts "C" + "I"*fifty.to_i
+#           end
+#         else
+#           if reply.to_i >= 10 && reply.to_i != 50 
+#             ten = reply.to_i % 10 
+#             if ten.to_i >= 5  && ten.to_i < 10 
+#               tens = ten.to_i - 5
+#               if tens.to_i % 1 == 0 && tens.to_i < 5
+#                 puts "X" + "V" + "I"*tens.to_i
+#               end
+#             else 
+#               puts "X"*(reply.to_i/10) + "I"*ten.to_i 
+#             end 
+#           else
+            
+#             if (reply.to_i >= 5 && reply.to_i < 10 )  
+#               next_number = reply.to_i - 5 
+#               if (next_number.to_i % 1 == 0 && next_number.to_i < 5) 
+#                 puts "V" + "I" *next_number.to_i
+#               end
+#             else
+#              puts "I" *reply.to_i          
+#             end
+#           end
+#         end
+#       end
+#     end
+
+#   elsif (reply.to_i % 10 ==0 && reply.to_i % 50 != 0) 
+#           puts "X"
+#         elsif (reply.to_i % 50 ==0 && reply.to_i % 100 != 0) 
+#           puts "L"
+#         elsif (reply.to_i % 100 ==0 && reply.to_i % 500 != 0) 
+#           puts "C"
+#         elsif (reply.to_i % 500 ==0 && reply.to_i % 1000 != 0) 
+#           puts "D"
+#         elsif (reply.to_i % 1000 ==0) 
+#           puts "M"
+#   puts old_roman_numerals(puts "What number would you like to convert to the old roman numberals?")
+
+
+# Improved ask method
+  # def ask question
+  #   while true
+  #     puts question
+  #     reply = gets.chomp.downcase
+  #     if (reply == "yes" || reply == "no")
+  #       if reply == "yes"
+  #       end
+  #       break
+  #     else
+  #       puts "please answer 'yes' or 'no'."
+  #     end
+  #   end
+  #   return reply
+  # end
+
+  # puts "hello, thank you for.."
+  # puts
+
+  # ask 'do you like eating tacos?'
+  # ask 'Do you like eating burritos?'
+  # wets_bed = ask 'Do you wet the bed?'
+  # ask 'Do you like mexicans?'
+
+  # puts "Briefing.."
+
+  # puts wets_bed
 
 
 # Ch 8
